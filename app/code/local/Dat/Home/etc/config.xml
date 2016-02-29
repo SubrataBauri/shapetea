@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <modules>
+            <Dat_Home>
+                <version>0.1.0</version>
+            </Dat_Home>
+        </modules>
+        <blocks>
+            <product>
+                <class>Dat_Home_Block</class>
+            </product>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <product>
+                <use>standard</use>
+                <args>
+                    <module>Dat_Home</module>
+                </args>
+            </product>
+        </routers>
+    </frontend>
+</config>

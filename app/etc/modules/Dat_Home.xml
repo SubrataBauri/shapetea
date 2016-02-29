@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dat_Home>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dat_Home>
+    </modules>
+</config>
