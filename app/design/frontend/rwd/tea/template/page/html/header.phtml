@@ -1,0 +1,183 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+
+
+
+<header id="header" class="page-header">
+    <div class="page-header-container">
+        <div class="toppart">
+            <div class="wrap">
+
+<!--        <a class="logo" href="<?php echo $this->getUrl('') ?>">
+<img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+<img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
+</a>
+
+                <?php
+                // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
+                // See app.js for details 
+                ?>
+<div class="store-language-container"></div>-->
+
+                <!-- Skip Links -->
+
+
+                <div id="header-nav" class="skip-content">
+                    <a href="#header-nav" class="skip-link skip-nav">
+                        <span class="icon"></span>
+                        <span class="label"><?php echo $this->__('Menu'); ?>
+                        </span>
+                    </a>
+                </div>
+                <div class="skip-links">
+                    <a class="skip-link skip-nav" href="#header-nav">
+                        <span class="icon"></span>
+                        <span class="label"><?php echo $this->__('Menu'); ?></span>
+                    </a>
+                    <a class="skip-link skip-search" href="#header-search">
+                        <span class="icon"></span>
+                        <span class="label"><?php echo $this->__('Search'); ?></span>
+                    </a>
+                    <!--                    <a href="#header-search" class="skip-link skip-search">
+                                            <span class="icon"></span>
+                                            <span class="label"><?php echo $this->__('Search'); ?></span>
+                                        </a>-->
+
+                    <!--                    <div class="account-cart-wrapper">
+                                            <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+                                                <span class="icon"></span>
+                                                <span class="label"><?php echo $this->__('Account'); ?></span>
+                                            </a>-->
+
+                    <!-- Cart -->
+
+                    <div class="header-minicart">
+                        <?php echo $this->getChildHtml('minicart_head'); ?>
+                    </div>
+
+                    <!--                   // </div>-->
+                    <div class="header-currency">
+                        <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                        <dl class="dropdown" id="sample">
+                            <dt>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)"><span>€ <label>Euro</label></span></a>
+                                </li>
+                            </ul>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
+                                            € <label>Euro</label> <span class="value"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
+                                            $ <label>US Dollar</label> <span class="value"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
+                                            £ <label>British Pound</label> <span class="value"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+           
+                <div class="header-account">
+
+                    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+                        <span class="icon"></span>
+                        <span class="label"><?php echo $this->__('Account'); ?></span>
+                    </a>
+                    <div class="skip-content" id="header-account">
+                        <div class="links">
+                            <ul>
+                                <li class="first"><a title="My Account" href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"><?php echo $this->__('Account'); ?></a></li>
+                                <li><a title="My Wishlist" href="<?php echo $this->getUrl('wishlist') ?>"><?php echo $this->__('My Wishlist'); ?></a></li>
+                                <li><a class="top-link-cart" title="My Cart" href="<?php echo Mage::helper('checkout/cart')->getCartUrl(); ?>"><?php echo $this->__('My Cart'); ?></a></li>
+                                <li><a class="top-link-checkout" title="Checkout" href="<?php echo Mage::getUrl('checkout/cart'); ?>"><?php echo $this->__('Checkout'); ?></a></li>
+                                <li><a title="Register" href="<?php echo Mage::getUrl('customer/account/create'); ?>"><?php echo $this->__('Register'); ?></a></li>
+                                    <?php if (Mage::helper('customer')->isLoggedIn() ): ?>
+                                <li class=" last"><a title="Log Out" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('Log Out'); ?></a></li>
+
+    <?php 
+
+else: ?>
+         <li class=" last"><a title="Log In" href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Log In'); ?></a></li>
+    <?php 
+
+endif; ?>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                         </div>
+                <div class="skip-content" id="header-search">
+                    <?php echo $this->getChildHtml('topSearch') ?>
+                </div>
+
+
+                <!-- Navigation -->
+
+                <div id="header-nav" class="skip-content">
+                    <?php echo $this->getChildHtml('topMenu') ?>
+                </div>
+                 <div id="header-nav" class="skip-content">
+                </div>
+                <div id="header-account" class="skip-content">
+                    <?php echo $this->getChildHtml('topLinks') ?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="botpart">
+            <div class="wrap">
+                <a class="logo" href="<?php echo $this->getUrl('') ?>">
+                    <img class="large" alt="<?php echo $this->getLogoAlt() ?>" src="<?php echo $this->getLogoSrc() ?>">
+                </a>
+                <a href="javascript:void(0)" class="plan">
+                    <img class="tag" src="images/icon-tag-free.png" alt="">
+                    <span>Download our</span>
+                    flexible eating plan
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<?php echo $this->getChildHtml('topContainer'); ?>

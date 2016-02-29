@@ -1,0 +1,89 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="footer-container">
+    <div class="footer">
+        <div class="toppart">
+            <div class="wrap">
+                <div class="offer">
+                    <div class="block">
+                        <img src="images/icon-secure-payment.png" alt="">
+                        <p>Shop through secured payment</p>
+                    </div>
+                    <div class="block">
+                        <img src="images/icon-delivery.png" alt="">
+                        <p>FREE DELIVERY on order OVER £50</p>
+                    </div>
+                    <div class="block">
+                        <img src="images/icon-plan.png" alt="">
+                        <p>Download our flexible eating plan</p>
+                    </div>
+                </div>
+                <div class="block block-subscribe">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_contact_us')->toHtml(); ?>
+                    <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
+                </div>
+                <div class="links">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_communication')->toHtml(); ?>  
+                </div>
+                <div class="links">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_information')->toHtml(); ?>   
+                </div>
+                <div class="links">
+                    <div class="block-title">
+                        <strong><span>My Accounts</span></strong>
+                    </div>
+                    <ul>
+                        <li><a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>">My account</a></li>
+                        <li><a href="<?php echo Mage::getUrl('sales/order/history'); ?>">Order history</a></li>
+                        <li><a href="<?php echo $this->getUrl('wishlist') ?>">Wish list</a></li>
+                        <li><a href="javascript:void(0)">Newsletter</a></li>
+                    </ul>  
+                </div>
+                <div class="links block-tweet">
+                   <?php  echo $this->getLayout()->createBlock('tweets/tweets')->setTemplate('vivacity/tweets/blank.phtml')->toHtml();?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="botpart">
+            <div class="wrap">
+                <p class="copyright">
+                    <span>&copy; 2016 shapetea.co.uk.  All rights reserved.</span>
+                    Any produyct related declaration will goes here.
+                </p>
+                <ul class="social">
+                    <li><a title="Google+" href="javascript:void(0)"><img src="images/icon-gplus.png" alt=""></a></li>
+                    <li><a title="Facebook" href="javascript:void(0)"><img src="images/icon-facebook.png" alt=""></a></li>
+                    <li><a title="Twitter" href="javascript:void(0)"><img src="images/icon-twitter.png" alt=""></a></li>
+                    <li><a title="RSS" href="javascript:void(0)"><img src="images/icon-rss.png" alt=""></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>

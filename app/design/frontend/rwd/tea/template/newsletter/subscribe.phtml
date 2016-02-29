@@ -1,0 +1,24 @@
+<?php
+/**
+ *
+ * @category    design
+ * @package     rwd_natural
+ */
+?>
+
+<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+                        <div class="block-content">
+                            <div class="form-subscribe-header">
+                                <label for="newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" class="input-text required-entry validate-email" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sign up for our newsletter')) ?>" placeholder="Signup for newsletter" id="newsletter" name="email" spellcheck="false" autocorrect="off" autocapitalize="off">
+                            </div>
+                            <div class="actions">
+                                <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span><?php echo $this->__('Signup') ?></span></span></button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
