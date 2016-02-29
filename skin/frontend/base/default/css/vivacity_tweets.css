@@ -1,0 +1,14 @@
+.latest-twitter-block li { padding: 5px 10px; font-size: inherit; }
+.latest-twitter-block img { max-width: 100%; }
+.latest-twitter-block li span { display: block; }
+.latest-twitter-block { width:100%; }
+.footerVivatweets { text-align:center !important; }
+.tweetHover { text-decoration:none !important; }
+.tweetHover:hover{ text-decoration:underline !important; }
+.tweetSeprator { border-bottom:1px dashed #DDDDDD; padding-bottom:5px; }
+.latest-twitter-block .dark { background: #333 none repeat scroll 0 0; color: #fff; }
+.latest-twitter-block.light .tweet-data a { color: #0084b4 !important; }
+.tweet-data { clear:both; padding-top:2px; }
+.latest-twitter-block.dark .tweet-data a { color: #87c2ed !important }
+.user-avatar { background: #fff none repeat scroll 0 0; }
+.circular { border-radius: 50%; }
