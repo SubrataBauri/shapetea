@@ -1,0 +1,8 @@
+app/etc/local.xml
+nbproject/
+var/cache/
+var/report/
+var/session/
+var/log/
+media/catalog/category/cache/
+media/catalog/product/cache/
