@@ -24,20 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php if ($this->getReviewsCount()): ?>
-    <div class="ratings">
-        <?php if ($this->getRatingSummary()):?>
-            <div class="rating-box">
-                <div class="rating" style="width:<?php echo $this->getRatingSummary() ?>%"></div>
-            </div>
-        <?php endif;?>
-        <p class="rating-links">
-            <span class="separator">|</span>
-            <a href="<?php echo $this->getReviewsUrl() ?>"><?php echo $this->__('%d Review(s)', $this->getReviewsCount()) ?></a>
-            <span class="separator">|</span>
-            <a href="<?php echo $this->getReviewsUrl() ?>#review-form"><?php echo $this->__('Add Your Review') ?></a>
-        </p>
+<div class="block block-tags">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Popular Tags'); ?></span></strong>
     </div>
-<?php elseif ($this->getDisplayIfEmpty()): ?>
-    <p class="no-rating"><a href="<?php echo $this->getReviewsUrl() ?>#review-form"><?php echo $this->__('Be the first to review this product') ?></a></p>
-<?php endif; ?>
+    <div class="block-content">
+        <ul class="tags-list">
+            <?php foreach ($this->getTags() as $_tag): ?>
+                <li><a href="<?php echo $_tag->getTaggedProductsUrl() ?>" style="font-size:<?php echo $_tag->getRatio()*70+75 ?>%;"><?php echo $this->escapeHtml($_tag->getName()) ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="actions">
+            <a href="<?php echo $this->getUrl('tag/list') ?>"><?php echo $this->__('View All Tags') ?></a>
+        </div>
+    </div>
+</div>

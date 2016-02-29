@@ -3,10 +3,23 @@
 <default>
     <remove name="left.newsletter" />
     <reference name="head">
+         <action method="addItem">
+                <type>skin_css</type>
+                 <name>css/flexslider.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                 <name>css/font-awesome.css</name>
+            </action>
+             
         <action method="addItem">
             <type>skin_js</type>
             <name>js/jquery.bxslider.js</name>
         </action>
+        <action method="addItem">
+                <type>skin_css</type>
+                 <name>css/custom.css</name>
+            </action>
     </reference>
     <reference name="header">
             <block type="directory/currency" name="custom_currency_selector" template="currency/currency.phtml"/>
@@ -16,6 +29,7 @@
             <block type="newsletter/subscribe" name="newsletter" as="newsletter" template="newsletter/subscribe.phtml" before="-" />
    
         </reference>
+        
 </default>
  <cms_index_index>
             <block type="product/product" name="hello" template="product/list.phtml"/>

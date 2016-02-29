@@ -1,0 +1,33 @@
+<?php
+
+$collection = Mage::getModel('banner/banner')->getCollection()->addFieldToFilter("status",0);
+//echo $collection->count(); ?>
+	
+	<ul class="slideshow">
+	<?php 
+foreach($collection as $eachcollection){
+//echo $eachcollection->getUrl();
+	?>
+		<li>
+		<a href= "<?php echo Mage::getUrl().$eachcollection->getUrl(); ?>" class="bannermobile">
+		<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$eachcollection->getImage(); ?>">
+		</a>
+		</li>
+<?php 
+}
+?>
+</ul>
+<div class="slideshow-pager">&nbsp;</div>
+ <span class="slideshow-prev">&nbsp;</span> <span class="slideshow-next">&nbsp;</span>
+
+
+<!--script>	
+jQuery(document).ready(function(){
+		jQuery('.bxSlider').bxSlider({
+		auto: true,
+  		autoControls: true
+  
+});	
+});
+</script-->
+
