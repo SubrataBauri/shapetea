@@ -17,6 +17,22 @@
             <name>js/jquery.bxslider.js</name>
         </action>
         <action method="addItem">
+            <type>skin_js</type>
+            <name>js/form.js</name>
+        </action>
+        <action method="addItem">
+            <type>skin_js</type>
+            <name>js/jquery.flexslider.js</name>
+        </action>
+        <action method="addItem">
+            <type>skin_js</type>
+            <name>js/matchMedia_002.js</name>
+        </action>
+        <action method="addItem">
+            <type>skin_js</type>
+            <name>js/slider.js</name>
+        </action>
+        <action method="addItem">
                 <type>skin_css</type>
                  <name>css/custom.css</name>
             </action>
@@ -33,6 +49,7 @@
 </default>
  <cms_index_index>
             <block type="product/product" name="hello" template="product/list.phtml"/>
+            <block type="product/product" name="hello" template="product/reviews.phtml"/>
     </cms_index_index>
     <catalog_product_view>
     <reference name="content">

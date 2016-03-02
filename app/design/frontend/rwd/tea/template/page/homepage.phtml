@@ -66,6 +66,7 @@
                         <h2>Our Products</h2>
                         <div class="products category-products">
                             <?php echo $this->getLayout()->createBlock('product/product')->setTemplate('product/list.phtml')->toHtml(); ?>
+                           
                         </div>
                         <div class="visitus">
                             <div class="inner">
@@ -75,34 +76,11 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
-                <div class="review">
-                    <div class="item">
-                        <?php echo $this->getChildHtml('reviews') ?>
-                       
-                        <img src="images/review-pic1.jpg" alt="">
-                        <div class="comment">
-                            <h6>Cathey C.</h6>
-                            <p>Consectetur adipiscing elit. Nullam augue diam, accumsan et ultricies at, luctus nec ante. Vivamus sed fringilla justo. Sed dolor eros, fringilla at metus non, consequat vestibulum turpis. Donec ac lectus metus. </p>
-                            <span class="rating"><span style="width: 100%"></span></span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/review-pic2.jpg" alt="">
-                        <div class="comment">
-                            <h6>Cathey C.</h6>
-                            <p>Consectetur adipiscing elit. Nullam augue diam, accumsan et ultricies at, luctus nec ante. Vivamus sed fringilla justo. Sed dolor eros, fringilla at metus non, consequat vestibulum turpis. Donec ac lectus metus. </p>
-                            <span class="rating"><span style="width: 80%"></span></span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/review-pic3.jpg" alt="">
-                        <div class="comment">
-                            <h6>Cathey C.</h6>
-                            <p>Consectetur adipiscing elit. Nullam augue diam, accumsan et ultricies at, luctus nec ante. Vivamus sed fringilla justo. Sed dolor eros, fringilla at metus non, consequat vestibulum turpis. Donec ac lectus metus. </p>
-                            <span class="rating"><span style="width: 60%"></span></span>
-                        </div>
-                    </div>
-                </div>
+               
+            
+               
+                   <?php echo $this->getLayout()->createBlock('product/product')->setTemplate('product/reviews.phtml')->toHtml(); ?> 
+               
                 
                 
                 <!--                            

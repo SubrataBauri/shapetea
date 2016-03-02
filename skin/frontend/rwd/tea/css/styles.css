@@ -9198,11 +9198,12 @@ div.paypal-logo span > img {
   line-height: 2em;
 }
 .header-minicart .subtotal .label {
-  color: white;
+  color: #3399cc;
   text-transform: uppercase;
 }
 .header-minicart .subtotal .price {
   color: #3399cc;
+  font-weight: bold;
 }
 .header-minicart .minicart-actions {
   padding: 10px;
