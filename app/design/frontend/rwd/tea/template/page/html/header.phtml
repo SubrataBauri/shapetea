@@ -27,34 +27,16 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-
-
-
 <header id="header" class="page-header">
     <div class="page-header-container">
         <div class="toppart">
             <div class="wrap">
-
-<!--        <a class="logo" href="<?php echo $this->getUrl('') ?>">
-<img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
-<img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
-</a>
-
                 <?php
                 // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
                 // See app.js for details 
                 ?>
-<div class="store-language-container"></div>-->
-
-                <!-- Skip Links -->
-
-
                 <div id="header-nav" class="skip-content">
-                    <a href="#header-nav" class="skip-link skip-nav">
-                        <span class="icon"></span>
-                        <span class="label"><?php echo $this->__('Menu'); ?>
-                        </span>
-                    </a>
+                    <?php echo $this->getChildHtml('topMenu') ?>
                 </div>
                 <div class="skip-links">
                     <a class="skip-link skip-nav" href="#header-nav">
@@ -65,54 +47,12 @@
                         <span class="icon"></span>
                         <span class="label"><?php echo $this->__('Search'); ?></span>
                     </a>
-                    <!--                    <a href="#header-search" class="skip-link skip-search">
-                                            <span class="icon"></span>
-                                            <span class="label"><?php echo $this->__('Search'); ?></span>
-                                        </a>-->
-
-                    <!--                    <div class="account-cart-wrapper">
-                                            <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
-                                                <span class="icon"></span>
-                                                <span class="label"><?php echo $this->__('Account'); ?></span>
-                                            </a>-->
-
-                    <!-- Cart -->
-
                     <div class="header-minicart">
                         <?php echo $this->getChildHtml('minicart_head'); ?>
                     </div>
 
-                    <!--                   // </div>-->
                     <div class="header-currency">
                         <?php echo $this->getChildHtml('custom_currency_selector') ?>
-<!--                        <dl class="dropdown" id="sample">
-                            <dt>
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)"><span>€ <label>Euro</label></span></a>
-                                </li>
-                            </ul>
-                            </dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
-                                            € <label>Euro</label> <span class="value"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
-                                            $ <label>US Dollar</label> <span class="value"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Select Your Currency" name="currency">
-                                            £ <label>British Pound</label> <span class="value"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>-->
                     </div>
 
                     <div class="header-account">
@@ -132,7 +72,7 @@
                                     <?php if (Mage::helper('customer')->isLoggedIn()): ?>
                                         <li class=" last"><a title="Log Out" href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>"><?php echo $this->__('Log Out'); ?></a></li>
 
-                                        <?php else:
+                                    <?php else:
                                         ?>
                                         <li class=" last"><a title="Log In" href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Log In'); ?></a></li>
                                     <?php endif; ?>
@@ -143,19 +83,10 @@
                     </div>
                 </div>
                 <div class="skip-content" id="header-search">
-<?php echo $this->getChildHtml('topSearch') ?>
-                </div>
-
-
-                <!-- Navigation -->
-
-                <div id="header-nav" class="skip-content">
-<?php echo $this->getChildHtml('topMenu') ?>
-                </div>
-                <div id="header-nav" class="skip-content">
+                    <?php echo $this->getChildHtml('topSearch') ?>
                 </div>
                 <div id="header-account" class="skip-content">
-<?php echo $this->getChildHtml('topLinks') ?>
+                    <?php echo $this->getChildHtml('topLinks') ?>
                 </div>
                 <div class="clearfix"></div>
             </div>
