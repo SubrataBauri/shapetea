@@ -5,22 +5,21 @@ Mage::log($reviews->getdata());
 //Mage::log($rating,null,'dipanwita.log');
 ?>
 <div class="review">
-<?php
-foreach ($reviews as $eachreview) {
-    ?>
-    <div class="item">
-        <img src="images/review-pic1.jpg" alt="">
-        <div class="comment">
-            <h6><?php echo $eachreview['nickname']; ?></h6>
-            <p><?php echo $eachreview['detail']; ?></p>
-           <?php echo $eachreview['percent']; ?>
-                <span class="rating"><span style="width:<?php echo $eachreview['percent'] ?>%;"></span></span>
-    <!--                            <div class="rating" style="width:<?php //echo $_vote->getPercent()    ?>%;"></div>-->
-        </div>
-    </div>
     <?php
-}
-?>
+    foreach ($reviews as $eachreview) {
+        ?>
+        <div class="item">
+            <img src="<?php echo $this->getSkinUrl('images/review-pic1.jpg') ?>" alt="">
+            <div class="comment">
+                <h6><?php echo $eachreview['nickname']; ?></h6>
+                <p><?php echo $eachreview['detail']; ?></p>
+                <span class="rating"><span style="width:<?php echo $eachreview['percent'] ?>%;"></span></span>
+    <!--                            <div class="rating" style="width:<?php //echo $_vote->getPercent()     ?>%;"></div>-->
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 
 

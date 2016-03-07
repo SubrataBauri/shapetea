@@ -188,6 +188,10 @@
                         <div class="tab-content"><?php echo $html ?></div>
                     </dd>
                 <?php endforeach;?>
+                <dt class="tab"><span>Tag</span></dt>
+                <dd class="tab-container">
+                    <div class="tab-content"><?php echo $this->getChildHtml('product_tag') ?></div>
+                </dd>
             </dl>
         <?php endif; ?>
     </div>

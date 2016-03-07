@@ -1,17 +1,28 @@
-<?php if($this->getCurrencyCount() > 1): ?>
-<div class="currency">
-    <label for="custom-currency-selector"><?php echo $this->__('Currency:') ?></label>
-    <div class="select-style">
-    <select onchange="window.location.href=this.value" name="custom-currency-selector" id="custom-currency-selector">
-        <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
-        <option value="<?php echo $this->getSwitchCurrencyUrl($_code)?>"
-            <?php if($_code == $this->getCurrentCurrencyCode()): ?>
-                selected="SELECTED"
-            <?php endif; ?>>
-            <?php echo $_code ?>
-        </option>
-        <?php endforeach; ?>
-    </select>
-    </div>
-</div>
+<?php if ($this->getCurrencyCount() > 1): ?>
+    <dl class="dropdown" id="sample">
+        <dt>
+        <ul>
+            <li>
+                <a onchange="window.location.href =<?php echo $this->getSwitchCurrencyUrl($_code) ?>"<?php if ($_code == $this->getCurrentCurrencyCode()): ?>
+                       selected="SELECTED"
+                   <?php endif; ?> name="custom-currency-selector" id="custom-currency-selector"><?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?>
+                </a>
+            </li>
+        </ul>
+        </dt>
+        <dd>
+            <ul>
+                <?php foreach ($this->getCurrencies() as $_code => $_code): 
+                $symbol = Mage::app()->getLocale()->currency($_code)->getSymbol();?>
+                    <li>
+                        <a href="<?php echo $this->getSwitchCurrencyUrl($_code) ?>">
+                            <?php echo $symbol ?> <label><?php echo $_code ?><?php Mage::log($symbol, null, 'dipanwita.log') ?></label> <span class="value"></span>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+
+            </ul>
+        </dd>
+    </dl>
 <?php endif; ?>
+

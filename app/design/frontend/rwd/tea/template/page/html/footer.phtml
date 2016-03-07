@@ -29,18 +29,9 @@
         <div class="toppart">
             <div class="wrap">
                 <div class="offer">
-                    <div class="block">
-                        <img src="images/icon-secure-payment.png" alt="">
-                        <p>Shop through secured payment</p>
-                    </div>
-                    <div class="block">
-                        <img src="images/icon-delivery.png" alt="">
-                        <p>FREE DELIVERY on order OVER £50</p>
-                    </div>
-                    <div class="block">
-                        <img src="images/icon-plan.png" alt="">
-                        <p>Download our flexible eating plan</p>
-                    </div>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_shop_through')->toHtml(); ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_free_delivery')->toHtml(); ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_eating_plan')->toHtml(); ?>
                 </div>
                 <div class="block block-subscribe">
                     <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_contact_us')->toHtml(); ?>
@@ -60,11 +51,11 @@
                         <li><a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>">My account</a></li>
                         <li><a href="<?php echo Mage::getUrl('sales/order/history'); ?>">Order history</a></li>
                         <li><a href="<?php echo $this->getUrl('wishlist') ?>">Wish list</a></li>
-                        
+
                     </ul>  
                 </div>
                 <div class="links block-tweet">
-                   <?php  echo $this->getLayout()->createBlock('tweets/tweets')->setTemplate('vivacity/tweets/blank.phtml')->toHtml();?>
+                    <?php echo $this->getLayout()->createBlock('tweets/tweets')->setTemplate('vivacity/tweets/blank.phtml')->toHtml(); ?>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -77,10 +68,10 @@
                     Any produyct related declaration will goes here.
                 </p>
                 <ul class="social">
-                    <li><a title="Google+" href="javascript:void(0)"><img src="images/icon-gplus.png" alt=""></a></li>
-                    <li><a title="Facebook" href="javascript:void(0)"><img src="images/icon-facebook.png" alt=""></a></li>
-                    <li><a title="Twitter" href="javascript:void(0)"><img src="images/icon-twitter.png" alt=""></a></li>
-                    <li><a title="RSS" href="javascript:void(0)"><img src="images/icon-rss.png" alt=""></a></li>
+                    <li><a title="Google+" href="https://plus.google.com" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-gplus.png') ?>" alt=""></a></li>
+                    <li><a title="Facebook" href="https://www.facebook.com" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-facebook.png') ?>" alt=""></a></li>
+                    <li><a title="Twitter" href="http://twitter.com/home" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-twitter.png') ?>" alt=""></a></li>
+                    <li><a title="RSS" href="http://yourdomainname.com/rss" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-rss.png') ?>" alt=""></a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
