@@ -144,7 +144,9 @@
                         }
                     }
                     ?>
-                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <p><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></p>
+                    <div class="actions-main">
+                        <?php echo $this->getPriceHtml($_product, true) ?>
                     <?php //if($_product->getRatingSummary()): ?>
                     <?php //echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                     <?php //endif; ?>
@@ -164,6 +166,7 @@
                             <?php endif; ?>
                         </ul>-->
                     </div>
+                </div>
                 </div>
             </li>
             <?php /*if ($i%$_columnCount==0 || $i==$_collectionSize): ?>

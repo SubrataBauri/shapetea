@@ -4198,7 +4198,7 @@ p.product-name a:hover {
 
 .products-grid .product-info {
   position: relative;
-  min-height: inherit !important;
+/*  min-height: inherit !important;*/
   padding: 0 25px 18px !important;
 }
 
