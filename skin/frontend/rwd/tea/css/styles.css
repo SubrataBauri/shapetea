@@ -510,10 +510,10 @@ textarea {
   line-height: 22px;
 }
 
-a {
+/*a {
   color: #3399cc;
   text-decoration: none;
-}
+}*/
 
 a:hover {
   color: #2e8ab8;
@@ -925,7 +925,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 
 /* Primary Buttons */
-.button,
+/*.button,
 .cart-table .product-cart-actions .button,
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
@@ -948,7 +948,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .footer .button:hover {
   background: #2e8ab8;
   cursor: pointer;
-}
+}*/
 .button:active,
 .cart-table .product-cart-actions .button:active,
 #co-shipping-method-form .buttons-set .button:active,
@@ -10284,9 +10284,9 @@ div.calendar table td.button {
   border-bottom: solid 2px #dedddd;
   padding: 0 0 10px;
 }
-.box-up-sell .products-grid > li {
+/*.box-up-sell .products-grid > li {
   margin-bottom: 0px;
-}
+}*/
 
 /* Responsive CSS */
 @media only screen and (max-width : 1199px) {

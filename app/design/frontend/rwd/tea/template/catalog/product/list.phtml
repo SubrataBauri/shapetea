@@ -87,7 +87,7 @@
                     </div>
                     <div class="product-secondary">
                         <?php //if(!$_product->canConfigure() && $_product->isSaleable()): ?>
-                            <p class="action"><button type="button" title="<?php //echo $this->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php //echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php /////echo $this->__('View Details') ?></span></span></button></p>
+                            <p class="action"><button type="button" title="<?php echo $this->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></p>
                         <?php if($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>
                             <p class="action"><a title="<?php echo $this->quoteEscape($this->__('View Details')) ?>" class="button" href="<?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a></p>
                         <?php else: ?>
@@ -145,9 +145,9 @@
                     }
                     ?>
                     <?php echo $this->getPriceHtml($_product, true) ?>
-                    <?php if($_product->getRatingSummary()): ?>
-                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
-                    <?php endif; ?>
+                    <?php //if($_product->getRatingSummary()): ?>
+                    <?php //echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                    <?php //endif; ?>
                     <div class="actions">
                        
                         <?php if($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>

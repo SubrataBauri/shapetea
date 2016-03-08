@@ -56,18 +56,12 @@
             <div class="product-shop">
                 <div class="product-name">
                     <span class="h1"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
-                </div>
-
-                
-
+                </div>              
                 <div class="extra-info">
                     <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
                     <?php echo $this->getChildHtml('product_type_availability'); ?>
                 </div>
-                
-
                 <?php echo $this->getChildHtml('alert_urls') ?>
-
                 <?php if ($_product->getShortDescription()):?>
                     <div class="short-description">
                         <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
@@ -78,10 +72,6 @@
                     <?php echo $this->getChildHtml('bundle_prices') ?>
                     <?php echo $this->getTierPriceHtml() ?>
                 </div>
-
-
-
-
                 <?php echo $this->getChildHtml('other');?>
 
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
@@ -116,9 +106,8 @@
             
             </div>
                 <div class="product-share">
-                    <?php echo $this->getChildHtml('sharing') ?>
-                </div>
-                  </div>
+                    <?php echo $this->getLayout()->createBlock('sharing/sharing')->setTemplate('sharing/socialshareproduct.phtml')->toHtml(); ?>
+                </div>              
 
             <div class="clearer"></div>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
