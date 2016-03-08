@@ -1,3 +1,61 @@
-.nav-primary a.level0 {
-    padding: 12px 14px;
+.button, .cart-table .product-cart-actions .button, #co-shipping-method-form .buttons-set .button, .footer .button {
+    background: #46ccc3 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 19px;
+    padding: 7px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.button:hover,
+.cart-table .product-cart-actions .button:hover,
+#co-shipping-method-form .buttons-set .button:hover,
+.footer .button:hover {
+  background: #818181;
+  cursor: pointer;
+}
+a {
+  color: #349992;
+  text-decoration: none;
+}
+.box-up-sell .products-grid > li {
+  margin-bottom: 35px;
+}
+.block-title h2, .block-title h3, .block-title strong {
+    color: #349992;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+}
+.block-account li strong, .block-cms-menu li strong {
+    color: #349992;
+    font-weight: 400;
+}
+.button2 span, .button2 span span {
+    color: #349992;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.header-minicart .info-wrapper td {
+    color: #349992;
+}
+.header-minicart .subtotal .label {
+    color: #349992;
+    text-transform: uppercase;
+}
+.header-minicart .subtotal .price {
+    color: #349992;
+    font-weight: bold;
 }

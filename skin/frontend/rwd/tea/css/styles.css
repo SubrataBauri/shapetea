@@ -685,7 +685,7 @@ h6, .h6 {
   margin-bottom: 5px;
   border-top: 1px solid #cccccc;
 }
-.block-title h2,
+/*.block-title h2,
 .block-title h3,
 .block-title strong {
   margin: 0;
@@ -701,7 +701,7 @@ h6, .h6 {
   margin-bottom: 0;
   text-transform: uppercase;
   font-weight: 600;
-}
+}*/
 .block-title small {
   font-size: 100%;
   font-weight: normal;
@@ -875,11 +875,11 @@ body:not(.customer-account) .block:first-child .block-title {
   text-transform: uppercase;
   margin: 7px 0;
 }
-.block-account li strong,
+/*.block-account li strong,
 .block-cms-menu li strong {
   font-weight: 400;
   color: #3399cc;
-}
+}*/
 .block-account li a,
 .block-cms-menu li a {
   color: #636363;
@@ -999,7 +999,7 @@ a.button:hover {
   outline: none;
 }
 
-.button2 span,
+/*.button2 span,
 .button2 span span {
   line-height: 30px;
   height: 30px;
@@ -1007,7 +1007,7 @@ a.button:hover {
   text-transform: uppercase;
   display: inline-block;
   color: #3399cc;
-}
+}*/
 .button2 span:hover,
 .button2 span span:hover {
   text-decoration: none;
@@ -9151,9 +9151,9 @@ div.paypal-logo span > img {
   padding-top: 0px;
   font-weight: bold;
 }
-.header-minicart .product-details .product-name a {
+/*.header-minicart .product-details .product-name a {
   color: #3399cc;
-}
+}*/
 .header-minicart .info-wrapper {
   margin-bottom: 0.5em;
 }
@@ -9161,10 +9161,10 @@ div.paypal-logo span > img {
   text-transform: uppercase;
   padding-right: 10px;
 }
-.header-minicart .info-wrapper td {
+/*.header-minicart .info-wrapper td {
   color: #3399cc;
   clear: right;
-}
+}*/
 .header-minicart .info-wrapper .qty-wrapper td {
   height: 33px;
   line-height: 33px;
@@ -9197,14 +9197,14 @@ div.paypal-logo span > img {
   text-align: center;
   line-height: 2em;
 }
-.header-minicart .subtotal .label {
+/*.header-minicart .subtotal .label {
   color: #3399cc;
   text-transform: uppercase;
-}
-.header-minicart .subtotal .price {
+}*/
+/*.header-minicart .subtotal .price {
   color: #3399cc;
   font-weight: bold;
-}
+}*/
 .header-minicart .minicart-actions {
   padding: 10px;
   margin-top: 0px;
