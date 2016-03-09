@@ -1,0 +1,52 @@
+<div class="test">
+    <div class="health-report">
+    <h5><?php echo $this->__('Free 3 Flexible Eating Plan') ?></h5>
+    <p><?php echo $this->__('To get the following 3 FREE Eating Plan, simply register your name and email address below:') ?></p>
+    <h5><?php //echo $this->__("Nutrition for Women's Health") ?></h5>
+     <h5><?php //echo $this->__("Women's General Health") ?></h5>
+    <h5><?php //echo $this->__('The 3 Steps to Good Health') ?></h5>
+    <form action="<?php echo Mage::getUrl('healthreportdownload/index/getfreereport'); ?>" method="post" name="myForm" onsubmit="return(validate());">
+        <div><p><?php echo $this->__("E-mail:") ?></p> <input class="health-email" type="text" name="email"></div>
+        <div><p><?php echo $this->__("First Name:") ?></p> <input class="health-email" type="text" name="fname"></div>
+        <div><p><?php echo $this->__("Last Name:") ?></p><input class="health-email" type="text" name="lname"></div>
+        <input type="submit" name="submit" class="download" value="Get Free Eating Plan"> 
+    </form>
+    <p><?php echo $this->__("We may contact you occasionally with information about our latest products and special offers. You can unsubscribe from this service at anytime. We promise never to sell, rent or share your private details with anyone.") ?></p>
+    </div>
+</div>
+<script type="text/javascript">
+function validate()
+      {
+      
+        if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+        if( document.myForm.email.value != "" )
+         {
+            var emailID = document.myForm.email.value;
+            var c = emailID.lastIndexOf('.');
+            var d = emailID.indexOf('@');
+            if(c<d||d<=0||d+2 == c||c+2 == emailID.length|| d+1 == c){
+            alert('Please enter valid email id');
+            return false;
+            }
+         }
+         
+         if( document.myForm.fname.value == "" )
+         {
+            alert( "Please provide your First Name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         if( document.myForm.lname.value == "" )
+         {
+            alert( "Please provide your Last Name!" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+         
+     }
+</script>
