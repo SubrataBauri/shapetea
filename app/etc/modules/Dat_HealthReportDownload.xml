@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dat_HealthReportDownload>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dat_HealthReportDownload>
+    </modules>
+</config>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dat_HealthReportDownload>
+            <version>0.1.1</version>
+        </Dat_HealthReportDownload>
+    </modules>
+    <frontend>
+        <routers>
+            <healthreportdownload>
+                <use>standard</use>
+                <args>
+                    <module>Dat_HealthReportDownload</module>
+                    <frontName>healthreportdownload</frontName>
+                </args>
+            </healthreportdownload>
+        </routers> 
+        <layout>
+            <updates>
+                <healthreportdownload>
+                    <file>healthreportdownload.xml</file>
+                </healthreportdownload>
+            </updates>
+        </layout> 
+    </frontend>
+    <global>
+        <blocks>
+            <healthreportdownload>
+                <class>Dat_HealthReportDownload_Block</class>
+            </healthreportdownload>
+        </blocks>
+        <helpers>
+            <healthreportdownload>
+                <class>Dat_HealthReportDownload_Helper</class>
+            </healthreportdownload>
+        </helpers>
+        <template>
+    <email> 
+        <health_report_download_email module="healthreportdownload">
+            <label>Cancel Order Email</label>
+            <file>health_report_download_email.html</file>
+            <type>html</type>
+        </health_report_download_email> 
+         </email>
+</template>
+    </global>
+</config>

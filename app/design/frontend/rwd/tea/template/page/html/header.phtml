@@ -96,8 +96,8 @@
                 <a class="logo" href="<?php echo $this->getUrl('') ?>">
                     <img class="large" alt="<?php echo $this->getLogoAlt() ?>" src="<?php echo $this->getLogoSrc() ?>">
                 </a>
-                <a href="javascript:void(0)" class="plan">
-                    <img class="tag" src="images/icon-tag-free.png" alt="">
+                <a href="<?php echo Mage::getBaseUrl().'healthreportdownload/index/reportdownload'?>" class="plan">
+                    <img class="tag" src="<?php echo $this->getSkinUrl('images/icon-tag-free.png') ?>" alt="">
                     <span>Download our</span>
                     flexible eating plan
                 </a>

@@ -47,11 +47,8 @@
             <?php echo $this->getChildHtml('global_notices') ?>
             <div class="page">
                 <?php echo $this->getChildHtml('header') ?>
-                <!--                <div class="main-container col1-layout">-->
-                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('banner/index.phtml')->toHtml(); ?>
-                <!--                    <div class="main">
-                                        <div class="col-main">-->
 
+                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('banner/index.phtml')->toHtml(); ?>
                 <div class="how-works">
                     <div class="wrap">
                         <h2>How it works</h2>
@@ -66,7 +63,7 @@
                         <h2>Our Products</h2>
                         <div class="products category-products">
                             <?php echo $this->getLayout()->createBlock('product/product')->setTemplate('product/list.phtml')->toHtml(); ?>
-                           
+
                         </div>
                         <div class="visitus">
                             <div class="inner">
@@ -76,19 +73,8 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
-               
-            
-               
-                   <?php echo $this->getLayout()->createBlock('product/product')->setTemplate('product/reviews.phtml')->toHtml(); ?> 
-               
-                
-                
-                <!--                            
-                                                </div>
-                
-                
-                                            </div>-->
-                <!--                        </div>-->
+                <?php echo $this->getLayout()->createBlock('product/product')->setTemplate('product/reviews.phtml')->toHtml(); ?> 
+
                 <?php echo $this->getChildHtml('footer_before') ?>
                 <?php echo $this->getChildHtml('footer') ?>
                 <?php echo $this->getChildHtml('global_cookie_notice') ?>

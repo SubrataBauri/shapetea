@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Captcha System Configuration
+*
+* @category   System Configuration
+*/
+-->
+<config>
+    <tabs>
+        <healthreportdownload_tab translate="label" module="healthreportdownload">
+            <label>DAT Email Addresses</label>
+            <sort_order>50</sort_order>
+        </healthreportdownload_tab>
+    </tabs>
+    <sections>
+        <healthreportdownload translate="label" module="healthreportdownload">		    
+            <label>DAT Email Addresses</label>
+            <tab>healthreportdownload_tab</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <healthreportdownload_group translate="label">
+                    <label>Dat Contact</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <healthreportdownload_field_email translate="label">                                    
+                            <label>Email</label>
+                            <comment>Provide Email</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>text</frontend_type>
+                        </healthreportdownload_field_email>
+                        <healthreportdownload_field_name translate="label">                                    
+                            <label>Name</label>
+                            <comment>Provide Name</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>text</frontend_type>
+                        </healthreportdownload_field_name>				
+                    </fields>
+                </healthreportdownload_group>
+            </groups>
+        </healthreportdownload>
+    </sections>
+</config>
