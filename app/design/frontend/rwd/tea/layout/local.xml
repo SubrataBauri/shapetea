@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <default>
+         <remove name="right.poll"/>
+            <remove name="left.reports.product.viewed"/>
         <remove name="left.newsletter" />
         <reference name="head">
             <block type="core/text" name="google.cdn.jquery">

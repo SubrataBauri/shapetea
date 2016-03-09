@@ -956,14 +956,14 @@ body:not(.customer-account) .block:first-child .block-title {
   background: #297aa3;
   color: #FFFFFF;
 }
-.button:focus,
+/*.button:focus,
 .cart-table .product-cart-actions .button:focus,
 #co-shipping-method-form .buttons-set .button:focus,
 .footer .button:focus {
   background-color: #297aa3;
   outline: none;
   color: #FFFFFF;
-}
+}*/
 
 a.button {
   text-decoration: none;

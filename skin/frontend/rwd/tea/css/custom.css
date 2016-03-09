@@ -59,3 +59,11 @@ a {
     color: #349992;
     font-weight: bold;
 }
+.button:focus,
+.cart-table .product-cart-actions .button:focus,
+#co-shipping-method-form .buttons-set .button:focus,
+.footer .button:focus {
+  background-color: #818181;
+  outline: none;
+  color: #FFFFFF;
+}
