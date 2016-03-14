@@ -47,6 +47,7 @@
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
+        <div class="wrap">
         <div class="main-container col2-left-layout">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
@@ -61,6 +62,7 @@
                 <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
             </div>
         </div>
+    </div>
         <?php echo $this->getChildHtml('footer_before') ?>
         <?php echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('global_cookie_notice') ?>
